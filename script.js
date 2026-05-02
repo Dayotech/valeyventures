@@ -1,21 +1,25 @@
- // DARK MODE
+  // DARK MODE TOGGLE
 function toggleDarkMode() {
   document.body.classList.toggle("dark");
   localStorage.setItem("darkMode", document.body.classList.contains("dark"));
 }
 
-// LOAD MODE
-window.onload = () => {
-  if (localStorage.getItem("darkMode") === "true") {
-    document.body.classList.add("dark");
+// LOAD SAVED MODE (SAFE)
+window.addEventListener("DOMContentLoaded", () => {
+  try {
+    if (localStorage.getItem("darkMode") === "true") {
+      document.body.classList.add("dark");
+    }
+  } catch (e) {
+    console.log("Dark mode error:", e);
   }
-};
+});
 
 // MOBILE MENU TOGGLE
-const toggleBtn = document.querySelector("[data-menu-toggle]");
+ const toggleBtn = document.querySelector("[data-menu-toggle]");
 const panel = document.querySelector("[data-mobile-panel]");
 
-if (toggleBtn) {
+if (toggleBtn && panel) {
   toggleBtn.addEventListener("click", () => {
     panel.classList.toggle("active");
   });

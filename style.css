@@ -83,10 +83,17 @@ button {
 
  
 
-.gallery {
+ .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .gallery-item {
@@ -541,12 +548,18 @@ body.dark .gallery-item {
   background: #1e293b;
 }
 
-.dark-btn {
-  background: none;
+ .dark-btn {
+  background: transparent;
   border: none;
-  font-size: 20px;
-  cursor: pointer;
   color: white;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+.dark-btn:hover {
+  transform: rotate(20deg) scale(1.1);
 }
 
 .hero {
