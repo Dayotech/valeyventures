@@ -1,0 +1,193 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | VALEYVENTURES</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+
+   <div id="loader">
+  <img src="assets/logo.png" style="height:60px; margin-bottom:10px;">
+  <div class="spinner"></div>
+</div>
+
+   
+  
+
+ <header class="topbar">
+  <div class="container">
+    <div class="nav">
+
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Valentine Ventures Logo">
+        <div>
+          <div class="brand-title">VALEYVENTURES</div>
+          <div class="brand-sub">Livestock • Farming • Agribusiness</div>
+        </div>
+      </a>
+
+      <!-- DESKTOP MENU -->
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="animals.html">Animals</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- TOGGLE BUTTON -->
+      <button class="mobile-toggle" data-menu-toggle>
+        ☰
+      </button>
+
+    </div>
+
+    <!-- MOBILE PANEL -->
+    <div class="mobile-panel" data-mobile-panel>
+      <a href="index.html">Home</a>
+      <a href="animals.html">Animals</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+
+    <div class="page-brand-badge">
+      <img src="assets/logo.png">
+      <div>
+        <div class="eyebrow">Contact Us</div>
+        <div style="font-weight:800">VALEYVENTURES</div>
+      </div>
+    </div>
+
+    <h1>Send your farm inquiry directly to WhatsApp.</h1>
+
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section section-soft">
+  <div class="container contact-grid">
+
+    <!-- FORM -->
+    <div class="card">
+      <div class="eyebrow">Farm Inquiry</div>
+      <h2>Request animal purchase or farm services.</h2>
+
+      <form id="whatsappForm" class="form-grid">
+
+        <input class="input" type="text" name="name" placeholder="Full name" required>
+        <input class="input" type="email" name="email" placeholder="Email address" required>
+        <input class="input" type="tel" name="phone" placeholder="Phone number">
+
+        <select class="input span-2" name="animal">
+          <option value="">Select animal of interest</option>
+          <option>Cow</option>
+          <option>Goat</option>
+          <option>Sheep</option>
+          <option>Chicken</option>
+          <option>Turkey</option>
+          <option>Other</option>
+        </select>
+
+        <textarea class="textarea span-2" name="message" placeholder="Tell us what you need" required></textarea>
+
+        <button class="btn-primary span-2" type="submit">
+          Send via WhatsApp
+        </button>
+
+      </form>
+    </div>
+
+    <!-- COMPANY INFO -->
+    <div class="card">
+      <div class="eyebrow">Company Info</div>
+
+      <div class="contact-list">
+        <div>
+          <strong>Address</strong><br>
+          9, Baale Street Gudugba,<br>
+          Ewekoro LG, Ogun State
+        </div>
+
+        <div>
+          <strong>Phone</strong><br>
+          <a href="tel:+2349026437580">+234 9026437580</a>
+        </div>
+
+        <div>
+          <strong>Email</strong><br>
+          <a href="mailto:valentinekaosarabello034">sales@valeyventures.com</a>
+        </div>
+
+        <div>
+          <strong>Website</strong><br>
+          <a href="#">www.valeyventures.com</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-row">
+
+    <div class="footer-brand">
+      <img src="assets/logo.png">
+      <div>
+        <strong>VALEYVENTURES</strong>
+        <span>© 2026 • Produced by Dayotech 2026</span>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="animals.html">Animals</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+// WhatsApp integration
+document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = this.name.value;
+  let phone = this.phone.value;
+  let animal = this.animal.value;
+  let message = this.message.value;
+
+  let text = `Hello VALEYVENTURES,%0AName: ${name}%0APhone: ${phone}%0AAnimal: ${animal}%0AMessage: ${message}`;
+
+  window.open(`https://wa.me/2349026437580?text=${text}`, "_blank");
+});
+</script>
+
+<a href="https://wa.me/2349026437580" target="_blank" class="cta-float">
+  🐄 Buy via WhatsApp
+</a>
+
+
+<a href="https://wa.me/2349026437580" class="whatsapp-float" target="_blank">
+  💬
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
