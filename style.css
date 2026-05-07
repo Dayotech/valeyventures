@@ -205,15 +205,13 @@ button {
 }
 
 /* CONTACT GRID */
-.contact-grid {
+ .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
-/* MOBILE FIX */
 @media(max-width:768px){
-  .form-grid,
   .contact-grid {
     grid-template-columns: 1fr;
   }
