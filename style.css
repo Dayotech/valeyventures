@@ -628,3 +628,10 @@ body.loaded {
 .cta-float {
   bottom: 90px;
 }
+
+.gallery-item video {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
