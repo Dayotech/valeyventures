@@ -635,3 +635,32 @@ body.loaded {
   object-fit: cover;
   display: block;
 }
+
+/* VIDEO INSIDE GALLERY */
+.gallery-item video {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+/* MOBILE VIDEO FIX */
+@media (max-width: 768px) {
+  .gallery-item video {
+    height: 180px;
+  }
+
+  .gallery-item img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item video {
+    height: 150px;
+  }
+
+  .gallery-item img {
+    height: 150px;
+  }
+}
